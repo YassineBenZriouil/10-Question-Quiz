@@ -1,0 +1,151 @@
+/* Global Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Container Styling */
+.home_container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+/* Title Styling */
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+/* Paragraph Styling */
+.text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Form Styling */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Select Dropdown */
+.select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.select:hover,
+.select:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+/* Select Options */
+.select_opt {
+    font-size: 1rem;
+}
+
+/* Button Styling */
+.btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Link Styling (within the button) */
+.btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn a:hover {
+    color: #e0e0e0;
+}
+
+.question {
+    font-size: xx-large;
+}
+
+.btns_container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+/*loading animation*/
+.circle-spin-3 {
+    --size: 24px;
+    --stroke-width: calc(var(--size) / 6);
+    --color: currentColor;
+    --animation-timing-function: linear;
+    --animation-duration: 1s;
+    width: var(--size);
+    height: var(--size);
+    border-width: var(--stroke-width);
+    border-style: solid;
+    border-color: var(--color) transparent var(--color) transparent;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    animation: var(--animation-timing-function) var(--animation-duration)
+        infinite circle-spin-3-animation;
+}
+
+@keyframes circle-spin-3-animation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .home_container {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+}
